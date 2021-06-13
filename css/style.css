@@ -1,0 +1,314 @@
+/* Color Palette
+#2B2D42 - dark blue
+#8D99AE - light blue
+#EF233C - red
+whitesmoke
+*/
+
+/* Global styles 
+============================*/
+
+html {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: inherit;	
+}
+
+body {
+  	font-family: "Open Sans", sans-serif;
+  	margin: 0;
+}
+
+h1,
+h2 {
+  	font-family: "Caveat", cursive;
+  	font-weight: 400;
+}
+
+h1 {
+	font-size: 80px;
+}
+
+h2 {
+	font-size: 40px;
+	margin-top: 0;
+}
+
+h3 {
+	margin: 0;
+}
+
+a {
+	color: #ef233c;
+}
+
+a:hover,
+a:focus {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+h1,
+nav,
+.profile-img,
+.contact-info a {
+	transition-duration: 1s;
+}
+
+.content-wrap {
+	max-width: 950px;
+	margin: 0 auto;
+	padding: 60px 50px;
+	overflow: hidden;
+}
+
+.content-wrap ul li {
+	margin-top: 5%;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.text-muted {.
+	color: gray;
+}
+
+.hidden {
+	display: none;
+}
+
+.btn {
+  text-decoration: none;
+  background: #ef233c;
+  color: whitesmoke;
+  padding: 10px;
+  display: inline-block;
+}
+
+/* Navigation
+============================*/
+nav {
+	text-align: center;
+	background: whitesmoke;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+nav a {
+  display: inline-block;
+  padding: 15px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+nav a:hover,
+nav a:focus {
+	background: lightgray;
+}
+
+/* Header and Footer
+============================*/
+
+/* header */
+header {
+	padding-top: 50px;
+  	position: relative;
+}
+
+header,
+footer {
+	background: #2b2d42;
+	color: #8d99ae;
+}
+
+header h1,
+header h2 {
+  	color: whitesmoke;
+  	margin: 0;
+}
+ 
+.profile-img {
+	border-radius: 50%;
+}
+
+.download {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+
+/* footer */
+footer {
+	text-align: center;
+}
+
+.contact-info a {
+  	padding: 10px;
+  	display: inline-block;
+  	opacity: 0.5;
+  	text-decoration: none;
+}
+
+.contact-info a:hover,
+.contact-info a:focus {
+	opacity: 1;
+}
+
+.contact-info a:focus {
+	outline: 1px solid whitesmoke;
+}
+
+/* Skills
+===========================*/
+.skills {
+	background: linear-gradient(rgba(141, 153, 174, 1),
+								rgba(141, 153, 174, 0.8)),
+				url(../images/pexels-photo-175039.jpeg)
+				no-repeat;
+	background-size: cover;
+}
+
+/* Projects
+===========================*/
+.projects {
+	background: linear-gradient(rgba(237, 242, 244, 0.8),
+								rgba(237, 242, 244, 1)),
+				url(../images/startup-photos.jpg)
+				no-repeat;
+	background-size: cover;
+}
+
+h3 ~ p {
+  margin: 0;
+}
+
+.project-description {
+  margin-bottom: 25px;
+}
+
+.project-description ul {
+	list-style: circle !important;
+	/*padding: left !important;*/
+	text-align: left !important;
+}
+
+.project-description p:first-of-type {
+  margin-top: 0;
+}
+
+.other-projects-list li,
+.skills-list li {
+	display: inline;
+}
+
+.other-projects-list li:not(:last-of-type)::after,
+.skills-list li:not(:last-of-type)::after {
+	content: ", ";
+}
+
+/* Education
+===========================*/
+.education {
+	background: linear-gradient(rgba(141, 153, 174, 1),
+								rgba(141, 153, 174, 0.8)),
+				url(../images/open-book-library-education-read-159621.jpeg)
+				no-repeat;
+	background-size: cover;
+}
+
+p + h3 {
+  margin-top: 30px;
+}
+
+/* Media Queries
+===========================*/
+@media (min-width: 900px) {
+  	nav {
+  		font-size: 0;
+  	}
+
+  	nav a {
+  		font-size: 1rem;
+  		width: 20%;
+  	}
+
+  	.col-narrow {
+    	width: 30%;
+    	float: left;
+  	}
+  	
+  	.col-wide {
+    	width: 70%;
+   		float: left;
+    	padding-left: 20px;
+  	}
+
+  	.contact-info a {
+  		font-size: x-large;
+  		padding: 10px 20px;
+  	}
+}
+
+@media (max-width: 899px){
+	html {
+		text-align: center;
+	}
+
+	h1 {
+		font-size: 50px;
+	}
+
+	h3 {
+		font-size: 18px; 
+	}
+
+	header {
+		padding: 0;
+	}
+
+	nav {
+		display: none;
+	}
+
+  	.profile-img {
+    	width: 200px;
+  	}
+}
+
+@media (max-width: 499px) {
+	h1 {
+		font-size: 40px;
+	}
+
+	h2 {
+		font-size: 35px;
+	}
+
+	h3 {
+		font-size: 16px;
+	}
+
+	p, a, li {
+		font-size: 14px;
+	}
+
+	.download {
+		left: 0;
+	}
+}
+
+
+/* media query to fix navbar for small devices */
+/* change the color pallete */
